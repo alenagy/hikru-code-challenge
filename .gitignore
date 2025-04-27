@@ -1,6 +1,7 @@
 # Global
 .vscode/
 .idea/
+.vs/
 *.suo
 *.user
 *.userosscache
