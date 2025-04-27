@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Mc8GYnPkyIyXHjQQj4/P9JLQd5vw9Z7PpKBipx8CjqQ=",
+  "Source": "HikruCodeChallenge.API",
+  "BasePath": "_content/HikruCodeChallenge.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
