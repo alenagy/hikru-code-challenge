@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HikruCodeChallenge.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62fe78aef0f935c92e4f4747898d2fe8c89e91d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbff94d237269f38348a157466c68797075bc5e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("HikruCodeChallenge.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HikruCodeChallenge.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

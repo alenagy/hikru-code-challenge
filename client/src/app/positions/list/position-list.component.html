@@ -1,0 +1,17 @@
+<div *ngIf="loading">Loading positions...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="!loading && !error">
+  <h2>Available Positions</h2>
+
+  <button [routerLink]="['/positions/create']">Create New Position</button>
+
+  <ul>
+    <li *ngFor="let position of positions">
+      <a [routerLink]="['/positions', position.id]">{{ position.title }}</a>
+      ({{ position.status }}) -
+      <button [routerLink]="['/positions', position.id, 'edit']">Edit</button>
+      <button (click)="onDelete(position.id)">Delete</button>
+    </li>
+  </ul>
+</div>

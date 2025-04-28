@@ -1,0 +1,39 @@
+<div *ngIf="loading">Loading form...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!loading">
+  <label>Title:</label>
+  <input type="text" formControlName="title" />
+  <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched">Title is required.</div>
+
+  <label>Description:</label>
+  <textarea formControlName="description"></textarea>
+  <div *ngIf="form.get('description')?.invalid && form.get('description')?.touched">Description is required.</div>
+
+  <label>Location:</label>
+  <input type="text" formControlName="location" />
+  <div *ngIf="form.get('location')?.invalid && form.get('location')?.touched">Location is required.</div>
+
+  <label>Status:</label>
+  <select formControlName="status">
+    <option value="Draft">Draft</option>
+    <option value="Open">Open</option>
+    <option value="Closed">Closed</option>
+    <option value="Archived">Archived</option>
+  </select>
+
+  <label>Recruiter ID:</label>
+  <input type="text" formControlName="recruiterId" />
+
+  <label>Department ID:</label>
+  <input type="text" formControlName="departmentId" />
+
+  <label>Budget:</label>
+  <input type="number" formControlName="budget" />
+
+  <label>Closing Date:</label>
+  <input type="date" formControlName="closingDate" />
+
+  <button type="submit">{{ isEdit ? 'Update' : 'Create' }} Position</button>
+  <button [routerLink]="['/positions']" type="button">Cancel</button>
+</form>

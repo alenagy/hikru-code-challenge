@@ -8,6 +8,17 @@ using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Infrastructure
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -54,6 +65,8 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavi
 builder.Services.AddValidatorsFromAssembly(typeof(CreatePositionCommand).Assembly);
 
 var app = builder.Build();
+
+app.UseCors("AllowFrontend");
 
 // Use Middleware
 app.UseMiddleware<ApiKeyMiddleware>();
